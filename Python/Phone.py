@@ -92,29 +92,30 @@ v - show phonebook
 x - exit
 ......
 """
-    ans = raw_input('Your Choise? ')
-    if ans == 'v':
-        view(phonebook)
-        raw_input('Press <Enter> for continue')
-    elif ans == 'a':
-        add(phonebook)
-        raw_input('Press <Enter> for continue')
-    elif ans == 'r':
-        remove(phonebook)
-        raw_input('Press <Enter> for continue')
-    elif ans == 'x':
-        break
-    elif ans == 'c':
-        if raw_input('Are you shure? [Y/N] ').lower() in ('y'):
-            phonebook = {}
-    elif ans == 'g':
-        show(phonebook)
-    elif ans == 's':
-        save(phonebook)
-        raw_input('Press <Enter> for continue')
-    elif ans == 'b':
-        bshow(phonebook)
-        raw_input('Press <Enter> for continue')
-    elif ans == 'i':
-        import_file(phonebook)
-        raw_input('Press <Enter> for continue')
+    if __name__ == "__main__":
+        ans = raw_input('Your Choise? ')
+        if ans == 'v':
+            view(phonebook)
+            raw_input('Press <Enter> for continue')
+        elif ans == 'a':
+            add(phonebook)
+            raw_input('Press <Enter> for continue')
+        elif ans == 'r':
+            remove(phonebook)
+            raw_input('Press <Enter> for continue')
+        elif ans == 'x':
+            break
+        elif ans == 'c':
+            if raw_input('Are you shure? [Y/N] ').lower() in ('y'):
+                phonebook = {}
+        elif ans == 'g':
+            show(phonebook)
+        elif ans == 's':
+            save(phonebook)
+            raw_input('Press <Enter> for continue')
+        elif ans == 'b':
+            bshow(phonebook)
+            raw_input('Press <Enter> for continue')
+        elif ans == 'i':
+            import_file(phonebook)
+            raw_input('Press <Enter> for continue')
