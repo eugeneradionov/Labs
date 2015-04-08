@@ -62,10 +62,9 @@ def view(vocabulary):
 
 def import_file(vocabulary):
     
-    
+    import os
     a = raw_input('Enter a file name: ')
-    #if f == open(raw_input('Enter a file name: '),'r'):
-    if a:
+    if os.path.isfile(a):
         f = open(a,'r')
         x = json.load(f)
         vocabulary.update(x)
