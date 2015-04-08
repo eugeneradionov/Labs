@@ -1,0 +1,92 @@
+object NiaForm: TNiaForm
+  Left = 231
+  Height = 240
+  Top = 191
+  Width = 320
+  Caption = 'Nia'
+  ClientHeight = 219
+  ClientWidth = 320
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '1.2.4.0'
+  object Memo1: TMemo
+    Left = 0
+    Height = 219
+    Top = 0
+    Width = 320
+    Align = alClient
+    Lines.Strings = (
+      'MEMO1'
+    )
+    MaxLength = 60
+    OnChange = Memo1Change
+    ScrollBars = ssVertical
+    TabOrder = 0
+  end
+  object MainMenu1: TMainMenu
+    left = 24
+    object File1: TMenuItem
+      Caption = 'File'
+      object Open: TMenuItem
+        Caption = 'Open...'
+        OnClick = OpenClick
+      end
+      object Save: TMenuItem
+        Caption = 'Save'
+        OnClick = SaveClick
+      end
+      object MenuItem6: TMenuItem
+        Caption = 'Save as'
+        OnClick = MenuItem6Click
+      end
+      object Quit: TMenuItem
+        Caption = 'Exit'
+        OnClick = QuitClick
+      end
+    end
+    object Edit: TMenuItem
+      Caption = 'Edit'
+      object FontChoices: TMenuItem
+        Caption = 'Font'
+        OnClick = FontChoicesClick
+      end
+      object MenuItem2: TMenuItem
+        Caption = 'Word wrap'
+        OnClick = MenuItem2Click
+      end
+      object ReadOnly: TMenuItem
+        Caption = 'Read Only'
+        OnClick = ReadOnlyClick
+      end
+    end
+    object Help: TMenuItem
+      Caption = 'Help'
+      object About: TMenuItem
+        Caption = 'About'
+        OnClick = AboutClick
+      end
+    end
+  end
+  object FontDialog1: TFontDialog
+    Width = 447
+    Height = 339
+    MinFontSize = 0
+    MaxFontSize = 0
+    left = 88
+  end
+  object OpenDialog1: TOpenDialog
+    Width = 720
+    Height = 540
+    FileName = '/home/eugene/Projects/Lazarus/lab8(Nia)/Docs/text.txt'
+    Filter = 'Text Document(*.txt)|*.txt|Bat(*.bat)|*.bat|Lazarus Project|*.lpr'
+    InitialDir = '/home/eugene/Projects/Lazarus/lab8(Nia)/Docs/'
+    OnFolderChange = OpenDialog1FolderChange
+    left = 152
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.txt'
+    Filter = 'Text Document(*.txt)|*.txt'
+    InitialDir = '/home/eugene/Projects/Lazarus/lab8(Nia)/Docs/'
+    left = 216
+  end
+end

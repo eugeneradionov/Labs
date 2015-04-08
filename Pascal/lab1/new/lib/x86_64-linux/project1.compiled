@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1405228788"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -vewnhi -Fi/home/eugene/Projects/Lazarus/lab1/new/lib/x86_64-linux -Fu/home/eugene/Projects/Lazarus/lab1/new/ -FU/home/eugene/Projects/Lazarus/lab1/new/lib/x86_64-linux/ -l project1.lpr"/>
+</CONFIG>

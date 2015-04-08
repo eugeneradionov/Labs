@@ -1,0 +1,323 @@
+object Form1: TForm1
+  Left = 235
+  Height = 263
+  Top = 148
+  Width = 314
+  Caption = 'Calculator'
+  ClientHeight = 242
+  ClientWidth = 314
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '1.2.4.0'
+  object Bevel1: TBevel
+    Left = 8
+    Height = 126
+    Top = 40
+    Width = 96
+  end
+  object Button1: TButton
+    Tag = 1
+    Left = 8
+    Height = 30
+    Top = 40
+    Width = 30
+    HelpType = htKeyword
+    HelpKeyword = '1'
+    Caption = '&1'
+    OnClick = Button2Click
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Tag = 2
+    Left = 40
+    Height = 30
+    Top = 40
+    Width = 30
+    Caption = '&2'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object Button3: TButton
+    Tag = 35
+    Left = 72
+    Height = 30
+    Top = 40
+    Width = 30
+    Caption = '&3'
+    OnClick = Button3Click
+    TabOrder = 2
+  end
+  object Button4: TButton
+    Tag = 4
+    Left = 8
+    Height = 30
+    Top = 72
+    Width = 30
+    Caption = '&4'
+    OnClick = Button4Click
+    TabOrder = 3
+  end
+  object Button5: TButton
+    Tag = 35
+    Left = 40
+    Height = 30
+    Top = 72
+    Width = 30
+    Caption = '&5'
+    OnClick = Button5Click
+    TabOrder = 4
+  end
+  object Button6: TButton
+    Tag = 35
+    Left = 72
+    Height = 30
+    Top = 72
+    Width = 30
+    Caption = '&6'
+    OnClick = Button6Click
+    TabOrder = 5
+  end
+  object Button7: TButton
+    Tag = 35
+    Left = 8
+    Height = 30
+    Top = 104
+    Width = 30
+    Caption = '&7'
+    OnClick = Button7Click
+    TabOrder = 6
+  end
+  object Button8: TButton
+    Tag = 35
+    Left = 40
+    Height = 30
+    Top = 104
+    Width = 30
+    Caption = '&8'
+    OnClick = Button8Click
+    TabOrder = 7
+  end
+  object Button9: TButton
+    Tag = 35
+    Left = 72
+    Height = 30
+    Top = 104
+    Width = 30
+    Caption = '&9'
+    OnClick = Button9Click
+    TabOrder = 8
+  end
+  object Button10: TButton
+    Left = 8
+    Height = 30
+    Top = 136
+    Width = 30
+    Caption = '&0'
+    OnClick = Button10Click
+    TabOrder = 9
+  end
+  object Button11: TButton
+    Left = 40
+    Height = 30
+    Top = 136
+    Width = 30
+    Caption = '&.'
+    Font.Height = -19
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    OnClick = Button11Click
+    ParentFont = False
+    TabOrder = 10
+  end
+  object Button12: TButton
+    Left = 72
+    Height = 30
+    Top = 136
+    Width = 30
+    Caption = '+\-'
+    OnClick = Button12Click
+    TabOrder = 11
+  end
+  object Bevel2: TBevel
+    Left = 8
+    Height = 64
+    Top = 176
+    Width = 178
+  end
+  object Edit1: TEdit
+    Left = 0
+    Height = 38
+    Top = 0
+    Width = 314
+    Align = alTop
+    TabOrder = 12
+  end
+  object Button13: TButton
+    Tag = 11
+    Left = 8
+    Height = 30
+    Top = 176
+    Width = 30
+    Caption = '&+'
+    OnClick = Button13Click
+    TabOrder = 13
+  end
+  object Button14: TButton
+    Tag = 12
+    Left = 40
+    Height = 30
+    Top = 176
+    Width = 30
+    Caption = '&-'
+    OnClick = Button13Click
+    TabOrder = 14
+  end
+  object Button15: TButton
+    Tag = 13
+    Left = 8
+    Height = 30
+    Top = 208
+    Width = 30
+    Caption = '&/'
+    OnClick = Button13Click
+    TabOrder = 15
+  end
+  object Button16: TButton
+    Tag = 14
+    Left = 40
+    Height = 30
+    Top = 208
+    Width = 30
+    Caption = '&*'
+    OnClick = Button13Click
+    TabOrder = 16
+  end
+  object Button17: TButton
+    Left = 144
+    Height = 62
+    Top = 176
+    Width = 40
+    Caption = '='
+    OnClick = Button17Click
+    TabOrder = 17
+  end
+  object Button18: TButton
+    Left = 72
+    Height = 30
+    Top = 176
+    Width = 30
+    Caption = 'Sin'
+    OnClick = Button18Click
+    TabOrder = 18
+  end
+  object Button19: TButton
+    Tag = 15
+    Left = 72
+    Height = 30
+    Top = 208
+    Width = 30
+    Caption = 'Div'
+    OnClick = Button13Click
+    TabOrder = 19
+  end
+  object Button20: TButton
+    Left = 104
+    Height = 64
+    Top = 176
+    Width = 30
+    Caption = 'ln'
+    OnClick = Button20Click
+    TabOrder = 20
+  end
+  object Button21: TButton
+    Left = 224
+    Height = 25
+    Top = 215
+    Width = 87
+    Caption = 'Exit'
+    OnClick = Button21Click
+    TabOrder = 21
+  end
+  object Button22: TButton
+    Left = 160
+    Height = 30
+    Top = 40
+    Width = 147
+    Caption = 'Backspace'
+    OnClick = Button22Click
+    TabOrder = 22
+  end
+  object Button23: TButton
+    Left = 160
+    Height = 31
+    Top = 72
+    Width = 147
+    Caption = 'Clear'
+    OnClick = Button23Click
+    TabOrder = 23
+  end
+  object Button24: TButton
+    Left = 248
+    Height = 49
+    Top = 104
+    Width = 59
+    Caption = 'Last Result'
+    OnClick = Button24Click
+    TabOrder = 24
+  end
+  object MainMenu1: TMainMenu
+    left = 184
+    top = 120
+    object MenuItem1: TMenuItem
+      Caption = 'File'
+      object MenuItem3: TMenuItem
+        Caption = 'Exit'
+        OnClick = MenuItem3Click
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Edit'
+      object MenuItem4: TMenuItem
+        Tag = 11
+        Caption = ' +'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem5: TMenuItem
+        Tag = 12
+        Caption = ' -'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem6: TMenuItem
+        Tag = 14
+        Caption = ' *'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem7: TMenuItem
+        Tag = 13
+        Caption = ' /'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem10: TMenuItem
+        Caption = 'Sin'
+        OnClick = Button18Click
+      end
+      object MenuItem11: TMenuItem
+        Tag = 15
+        Caption = 'Div'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem12: TMenuItem
+        Caption = 'ln'
+        OnClick = Button20Click
+      end
+    end
+    object MenuItem8: TMenuItem
+      Caption = 'About'
+      OnClick = MenuItem8Click
+      object MenuItem9: TMenuItem
+        Caption = 'Author'
+        OnClick = MenuItem9Click
+      end
+    end
+  end
+end
