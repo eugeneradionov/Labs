@@ -77,8 +77,9 @@ f = open("Phonebook.txt","r")
 phonebook = json.load(f)
 f.close()
 
-while True:
-    print"""
+if __name__ == "__main__":
+    while True:
+        print"""
 ......
 a - add phone
 b - show names
@@ -90,8 +91,7 @@ s - save phone book into the file
 v - show phonebook
 x - exit
 ......
-"""
-    if __name__ == "__main__":
+"""    
         ans = raw_input('Your Choise? ')
         if ans == 'v':
             view(phonebook)
