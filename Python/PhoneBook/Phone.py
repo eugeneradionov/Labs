@@ -45,9 +45,12 @@ def show(vocabulary):
 
 def save(vocabulary):
     """Saving Phone Book into the file"""
-    f = open("Phonebook.txt","w")
-    json.dump(vocabulary,f)
-    f.close()
+    try:
+        f = open("Phonebook.txt","w")
+        json.dump(vocabulary,f)
+        f.close() 
+    except IOError:
+        print 'I\O Error'
     print 'Job done!'
 
 def view(vocabulary):
@@ -65,19 +68,26 @@ def import_file(vocabulary):
     import os
     a = raw_input('Enter a file name: ')
     if os.path.isfile(a):
-        f = open(a,'r')
-        x = json.load(f)
-        vocabulary.update(x)
-        f.close()
+        try:
+            f = open(a,'r')
+            x = json.load(f)
+            vocabulary.update(x)
+            f.close()
+        except IOError:
+            print 'I\O Error' 
     else:
         print 'There is no file with this name'
     
 
-f = open("Phonebook.txt","r")
-phonebook = json.load(f)
-f.close()
 
 if __name__ == "__main__":
+    try:
+        f = open("Phonebook.txt","r")
+        phonebook = json.load(f)
+        f.close()
+    except IOError:
+        print 'I\O Error'
+        
     while True:
         print"""
 ......
