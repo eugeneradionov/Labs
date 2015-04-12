@@ -21,9 +21,7 @@ def remove(vocabulary):
 
 def bshow(vocabulary):
     """Shwowing all contacts from Phone Book alphabetically"""
-    m = []
-    for i in vocabulary.keys():
-        m.append(str(i))
+    m = vocabulary.keys()
     m.sort()
     i = 0
     while i <= len(vocabulary.keys())-1:
@@ -41,14 +39,14 @@ def show(vocabulary):
             vocabulary[s] = raw_input('Please enter a phone: ')
     #else:
     #   print 'There is no name in phone book'
-    raw_input('Press <Enter> for continue')    
+    #raw_input('Press <Enter> for continue')
 
 def save(vocabulary):
     """Saving Phone Book into the file"""
     try:
         f = open("Phonebook.txt","w")
         json.dump(vocabulary,f)
-        f.close() 
+        f.close()
     except IOError:
         print 'I\O Error'
     print 'Job done!'
@@ -56,15 +54,19 @@ def save(vocabulary):
 def view(vocabulary):
     """Showing Name and Phone"""
     if vocabulary:
-        i = 0
+        """i = 0
         while i <= len(vocabulary.keys())-1:
             print vocabulary.keys()[i],':',vocabulary.values()[i]
-            i = i+1
+            i = i + 1"""
+        a = vocabulary.items()
+        for i in a:
+            print i[0], ':', i[1]
+        
     else:
         print "There are no phones in Your Phone book"
 
 def import_file(vocabulary):
-    
+
     import os
     a = raw_input('Enter a file name: ')
     if os.path.isfile(a):
@@ -74,10 +76,12 @@ def import_file(vocabulary):
             vocabulary.update(x)
             f.close()
         except IOError:
-            print 'I\O Error' 
+            print 'I\O Error'
+        except:
+            phonebook = {}
     else:
         print 'There is no file with this name'
-    
+
 
 
 if __name__ == "__main__":
@@ -87,7 +91,9 @@ if __name__ == "__main__":
         f.close()
     except IOError:
         print 'I\O Error'
-        
+    except:
+        phonebook = {}
+
     while True:
         print"""
 ......
@@ -101,17 +107,17 @@ s - save phone book into the file
 v - show phonebook
 x - exit
 ......
-"""    
+"""
         ans = raw_input('Your Choise? ')
         if ans == 'v':
             view(phonebook)
-            raw_input('Press <Enter> for continue')
+            #raw_input('Press <Enter> for continue')
         elif ans == 'a':
             add(phonebook)
-            raw_input('Press <Enter> for continue')
+            #raw_input('Press <Enter> for continue')
         elif ans == 'r':
             remove(phonebook)
-            raw_input('Press <Enter> for continue')
+            #raw_input('Press <Enter> for continue')
         elif ans == 'x':
             break
         elif ans == 'c':
@@ -121,10 +127,10 @@ x - exit
             show(phonebook)
         elif ans == 's':
             save(phonebook)
-            raw_input('Press <Enter> for continue')
+            #raw_input('Press <Enter> for continue')
         elif ans == 'b':
             bshow(phonebook)
-            raw_input('Press <Enter> for continue')
+            #raw_input('Press <Enter> for continue')
         elif ans == 'i':
             import_file(phonebook)
-            raw_input('Press <Enter> for continue')
+        raw_input('Press <Enter> for continue')
