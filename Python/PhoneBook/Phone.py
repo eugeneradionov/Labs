@@ -26,7 +26,7 @@ def bshow(vocabulary):
     i = 0
     while i <= len(vocabulary.keys())-1:
         print m[i]
-        i = i+1
+        i = i + 1
 
 def show(vocabulary):
     """Finding and showing the contact, you entered"""
