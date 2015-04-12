@@ -37,9 +37,6 @@ def show(vocabulary):
         print 'There is no name in Phone Book'
         if raw_input('Do You want to add it? [Y/N] ').lower() in ('y'):
             vocabulary[s] = raw_input('Please enter a phone: ')
-    #else:
-    #   print 'There is no name in phone book'
-    #raw_input('Press <Enter> for continue')
 
 def save(vocabulary):
     """Saving Phone Book into the file"""
@@ -54,19 +51,15 @@ def save(vocabulary):
 def view(vocabulary):
     """Showing Name and Phone"""
     if vocabulary:
-        """i = 0
-        while i <= len(vocabulary.keys())-1:
-            print vocabulary.keys()[i],':',vocabulary.values()[i]
-            i = i + 1"""
         a = vocabulary.items()
         for i in a:
             print i[0], ':', i[1]
         
     else:
-        print "There are no phones in Your Phone book"
+        print 'There are no phones in Your Phone book'
 
 def import_file(vocabulary):
-
+    """Iport from file"""
     import os
     a = raw_input('Enter a file name: ')
     if os.path.isfile(a):
@@ -78,9 +71,14 @@ def import_file(vocabulary):
         except IOError:
             print 'I\O Error'
         except:
-            phonebook = {}
+            print 'Oops, we can`t import frop this file :('
     else:
         print 'There is no file with this name'
+
+def clear(vocabulary):
+    """Cleaning the Phone Book """
+    if raw_input('Are you shure? [Y/N] ').lower() in ('y'):
+        vocabulary = {}
 
 
 
@@ -111,26 +109,20 @@ x - exit
         ans = raw_input('Your Choise? ')
         if ans == 'v':
             view(phonebook)
-            #raw_input('Press <Enter> for continue')
         elif ans == 'a':
             add(phonebook)
-            #raw_input('Press <Enter> for continue')
         elif ans == 'r':
             remove(phonebook)
-            #raw_input('Press <Enter> for continue')
         elif ans == 'x':
             break
         elif ans == 'c':
-            if raw_input('Are you shure? [Y/N] ').lower() in ('y'):
-                phonebook = {}
+            clear(phonebook)
         elif ans == 'g':
             show(phonebook)
         elif ans == 's':
             save(phonebook)
-            #raw_input('Press <Enter> for continue')
         elif ans == 'b':
             bshow(phonebook)
-            #raw_input('Press <Enter> for continue')
         elif ans == 'i':
             import_file(phonebook)
         raw_input('Press <Enter> for continue')
