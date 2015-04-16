@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Phone book
 Created by Eugene Radionov
 26 March 2015"""
@@ -23,10 +24,12 @@ def bshow(vocabulary):
     """Shwowing all contacts from Phone Book alphabetically"""
     m = vocabulary.keys()
     m.sort()
-    i = 0
+    for k in m:
+        print k
+    """i = 0
     while i <= len(vocabulary.keys())-1:
         print m[i]
-        i = i + 1
+        i = i + 1"""
 
 def show(vocabulary):
     """Finding and showing the contact, you entered"""
@@ -50,10 +53,12 @@ def save(vocabulary):
 
 def view(vocabulary):
     """Showing Name and Phone"""
-    if vocabulary:
-        a = vocabulary.items()
-        for i in a:
-            print i[0], ':', i[1]
+    """if vocabulary:
+        for i in vocabulary.items():
+            print i[0], ':', i[1]"""
+            
+    for k in vocabulary.keys():
+        print "%s : %s" % (k, vocabulary[k])
         
     else:
         print 'There are no phones in Your Phone book'
@@ -78,10 +83,7 @@ def import_file(vocabulary):
 def clear(vocabulary):
     """Cleaning the Phone Book """
     if raw_input('Are you shure? [Y/N] ').lower() in ('y'):
-        vocabulary = {}
-
-
-
+        return {}
 if __name__ == "__main__":
     try:
         f = open("Phonebook.txt","r")
@@ -116,7 +118,8 @@ x - exit
         elif ans == 'x':
             break
         elif ans == 'c':
-            clear(phonebook)
+            phonebook.clear()
+            print 'Job done!'
         elif ans == 'g':
             show(phonebook)
         elif ans == 's':
