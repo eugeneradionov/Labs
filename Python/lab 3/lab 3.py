@@ -1,6 +1,12 @@
-f = open('01.txt', 'r')
-a = f.read()
-f.close()
+filename = raw_input('Please enter file name: ')
+try:
+    f = open(filename, 'r')
+    a = f.read()
+    f.close()
+except IOError:
+    print 'Sorry, but IOError.'
+except:
+    print 'Oops :('
 a = a.strip().split(' ')
 #a = ['1', '2', '3', '4', '7', '7', '10', '11', '12', '15', '21', '22', '25']
 print a
@@ -39,6 +45,7 @@ else:
     s = '-'
         
 print s
-f = open('01~.txt', 'w')
+output = filename.split('.')[0] + '~.' + filename.split('.')[1]
+f = open(output, 'w')
 f.write(s)
 f.close()
