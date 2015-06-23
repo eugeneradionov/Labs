@@ -35,7 +35,7 @@ else
   all_weight, all_value = 0, 0
   begin
     while all_weight <= W
-      
+        
     end
   end
 end
