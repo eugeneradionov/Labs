@@ -8,7 +8,6 @@ except IOError:
 except:
     print 'Oops :('
 a = a.strip().split(' ')
-#a = ['1', '2', '3', '4', '7', '7', '10', '11', '12', '15', '21', '22', '25']
 print a
 
 x = []

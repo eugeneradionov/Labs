@@ -67,7 +67,7 @@ def import_file(vocabulary):
         except IOError:
             print 'I\O Error'
         except:
-            print 'Oops, we can`t import frop this file :('
+            print 'Oops, we can`t import from this file :('
     else:
         print 'There is no file with this name'
 
