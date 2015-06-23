@@ -1,11 +1,12 @@
 #Getting value and weight for each boxes
+p 'Please enter max weight of sack: '
+$maxweight = gets.chop.to_i
 p 'Please enter the nuber of items: '
 n = gets.chop.to_i
-if n == 0
+if n == 0 or $maxweight == 0
   p 'The number must be positive!'
   exit
 end
-$maxweight = 15
 $weight, $value = [], []
 i =0
 while i < n
@@ -17,7 +18,7 @@ while i < n
   $value << b
   i+=1
 end
-p $value, $weight
+#p $value, $weight
 #Calculating optimal solution
 $all_weight, $all_value, i = 0, 0, 0
 $max_values, $max_weights =[], []
