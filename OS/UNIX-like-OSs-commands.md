@@ -28,7 +28,7 @@
 
   `$sudo find /etc -name '*version' -o -name '*release' -type f -exec cat {} >> hello_cat.txt \;`
 
-С помощью xargs
+  С помощью xargs
 
   `$sudo find /etc -name '*version' -o -name '*release' -type f | xargs cat >> hello_cat.txt`
 
