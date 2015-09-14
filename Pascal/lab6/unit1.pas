@@ -23,6 +23,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Edit1Change(Sender: TObject);
+    procedure Edit2Change(Sender: TObject);
   private
     { private declarations }
   public
@@ -39,6 +40,11 @@ implementation
 { TForm1 }
 
 procedure TForm1.Edit1Change(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Edit2Change(Sender: TObject);
 begin
 
 end;

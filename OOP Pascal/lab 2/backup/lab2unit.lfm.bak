@@ -1,0 +1,147 @@
+object Form1: TForm1
+  Left = 302
+  Height = 218
+  Top = 182
+  Width = 442
+  Caption = 'Form1'
+  ClientHeight = 218
+  ClientWidth = 442
+  OnCreate = FormCreate
+  LCLVersion = '1.0.10.0'
+  object GroupBox1: TGroupBox
+    Left = 248
+    Height = 105
+    Top = 8
+    Width = 185
+    Caption = 'GroupBox1'
+    ClientHeight = 88
+    ClientWidth = 181
+    TabOrder = 0
+    object Edit1: TEdit
+      Left = 6
+      Height = 27
+      Top = 41
+      Width = 56
+      OnKeyPress = Edit1KeyPress
+      TabOrder = 0
+    end
+    object Label1: TLabel
+      Left = 6
+      Height = 16
+      Top = 25
+      Width = 55
+      Caption = 'Ввод угла'
+      ParentColor = False
+    end
+    object Button1: TButton
+      Left = 94
+      Height = 32
+      Top = 41
+      Width = 83
+      Caption = 'Установить'
+      OnClick = Button1Click
+      TabOrder = 1
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 248
+    Height = 105
+    Top = 104
+    Width = 185
+    Caption = 'GroupBox2'
+    ClientHeight = 88
+    ClientWidth = 181
+    TabOrder = 1
+    object SpinEdit1: TSpinEdit
+      Left = 6
+      Height = 27
+      Top = 23
+      Width = 56
+      Increment = 5
+      OnChange = SpinEdit1Change
+      TabOrder = 0
+      Value = 10
+    end
+    object Button2: TButton
+      Left = 78
+      Height = 33
+      Top = 17
+      Width = 35
+      Caption = '+'
+      OnClick = Button2Click
+      TabOrder = 1
+    end
+    object Button3: TButton
+      Left = 118
+      Height = 33
+      Top = 17
+      Width = 35
+      Caption = '-'
+      OnClick = Button3Click
+      TabOrder = 2
+    end
+    object Button4: TButton
+      Left = 78
+      Height = 25
+      Top = 57
+      Width = 75
+      Caption = 'Показать'
+      OnClick = Button4Click
+      TabOrder = 3
+    end
+  end
+  object PaintBox1: TPaintBox
+    Left = 10
+    Height = 105
+    Top = 10
+    Width = 105
+    ParentColor = False
+  end
+  object Button5: TButton
+    Left = 160
+    Height = 25
+    Top = 184
+    Width = 75
+    Caption = 'Очистить'
+    OnClick = Button5Click
+    TabOrder = 2
+  end
+  object Button6: TButton
+    Left = 160
+    Height = 25
+    Top = 88
+    Width = 75
+    Caption = 'Цвет'
+    OnClick = Button6Click
+    TabOrder = 3
+  end
+  object ColorDialog1: TColorDialog
+    Width = 504
+    Height = 291
+    Color = clHighlight
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 200
+    top = 8
+  end
+end

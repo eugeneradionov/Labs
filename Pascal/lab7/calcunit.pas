@@ -75,6 +75,7 @@ type
     procedure Button7Click(Sender: TObject);
     procedure Button8Click(Sender: TObject);
     procedure Button9Click(Sender: TObject);
+    procedure Edit1Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure MenuItem10Click(Sender: TObject);
     procedure MenuItem11Click(Sender: TObject);
@@ -248,6 +249,11 @@ end;
 procedure TForm1.Button9Click(Sender: TObject);
 begin
   Edit1.Text:=Edit1.Text+'9';
+end;
+
+procedure TForm1.Edit1Change(Sender: TObject);
+begin
+
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
